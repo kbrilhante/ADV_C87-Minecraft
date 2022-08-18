@@ -40,7 +40,7 @@ window.addEventListener("keydown", keyDown);
 function keyDown(e) {
     keyPressed = e.keyCode;
     if (e.shiftKey) {
-        if (keyPressed == 189) {
+        if (keyPressed == 189 && (blockImageHeight > 10)) {
             console.log("Diminui o tamanho do bloco");
             changeSize(-10);
         }
@@ -49,6 +49,10 @@ function keyDown(e) {
             changeSize(10);
         }
     }
+    if (keyPressed == 38) {
+        console.log("cima");
+        movePlayer(0, -1)
+    }
 }
 
 function changeSize(size) {
@@ -56,4 +60,11 @@ function changeSize(size) {
     blockImageHeight += size;
     document.getElementById("larguraAtual").innerHTML = blockImageWidth;
     document.getElementById("alturaAtual").innerHTML = blockImageHeight;
+}
+
+function movePlayer (x, y) {
+    playerX += x;
+    playerY += y;
+
+    playerUpdate();
 }
