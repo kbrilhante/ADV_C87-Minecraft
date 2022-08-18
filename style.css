@@ -41,6 +41,17 @@ span {
     margin:auto;
 }
 
+.block {
+    width: 30px;
+}
+
+#instructions, .btn {
+    border-radius: 10px;
+	width: fit-content;
+	padding: 10px 20px;
+    margin: 20px auto auto;
+}
+
 /* 
 a {
 	text-decoration: none;

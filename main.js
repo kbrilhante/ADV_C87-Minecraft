@@ -51,21 +51,48 @@ function keyDown(e) {
         }
     }
 
-    if (keyPressed == 38) {
-        console.log("cima");
-        movePlayer(0, -passo);
-    } else if (keyPressed == 37) {
-        console.log("esquerda");
-        movePlayer(-passo, 0);
-    } else if (keyPressed == 40) {
-        console.log("baixo");
-        movePlayer(0, passo);
-    } else if (keyPressed == 39) {
-        console.log("direita");
-        movePlayer(passo, 0);
-    }
+    // if (keyPressed == 38) {
+    //     console.log("cima");
+    //     movePlayer(0, -passo);
+    // } else if (keyPressed == 37) {
+    //     console.log("esquerda");
+    //     movePlayer(-passo, 0);
+    // } else if (keyPressed == 40) {
+    //     console.log("baixo");
+    //     movePlayer(0, passo);
+    // } else if (keyPressed == 39) {
+    //     console.log("direita");
+    //     movePlayer(passo, 0);
+    // }
 
-    if (keyPressed == s) {}
+    if (keyPressed == 66) { //B
+        console.log(e.key);
+        newImage("bricks.jpg");
+    } else if (keyPressed == 89) { //Y
+        console.log(e.key);
+        newImage("yellowBricks.png");
+    } else if (keyPressed == 68) { //D
+        console.log(e.key);
+        newImage("dirt.png");
+    } else if (keyPressed == 75) { //K
+        console.log(e.key);
+        newImage("darkGrass.png");
+    } else if (keyPressed == 76) { //L
+        console.log(e.key);
+        newImage("lightGrass.png");
+    } else if (keyPressed == 71) { //G
+        console.log(e.key);
+        newImage("glowstone.png");
+    } else if (keyPressed == 78) { //N
+        console.log(e.key);
+        newImage("netherrack.jpg");
+    } else if (keyPressed == 83) { //S
+        console.log(e.key);
+        newImage("stone.jpg");
+    } else if (keyPressed == 87) { //W
+        console.log(e.key);
+        newImage("wood.jpg");
+    }
 }
 
 function changeSize(size) {
