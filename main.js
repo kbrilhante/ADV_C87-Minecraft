@@ -38,21 +38,34 @@ function newImage(getImage) {
 window.addEventListener("keydown", keyDown);
 
 function keyDown(e) {
-    keyPressed = e.keyCode;
+    const keyPressed = e.keyCode;
+    const passo = 10;
     if (e.shiftKey) {
         if (keyPressed == 189 && (blockImageHeight > 10)) {
             console.log("Diminui o tamanho do bloco");
-            changeSize(-10);
+            changeSize(-passo);
         }
         if (keyPressed == 187) {
             console.log("Aumenta o tamanho do bloco");
-            changeSize(10);
+            changeSize(passo);
         }
     }
+
     if (keyPressed == 38) {
         console.log("cima");
-        movePlayer(0, -1)
+        movePlayer(0, -passo);
+    } else if (keyPressed == 37) {
+        console.log("esquerda");
+        movePlayer(-passo, 0);
+    } else if (keyPressed == 40) {
+        console.log("baixo");
+        movePlayer(0, passo);
+    } else if (keyPressed == 39) {
+        console.log("direita");
+        movePlayer(passo, 0);
     }
+
+    
 }
 
 function changeSize(size) {
@@ -62,9 +75,10 @@ function changeSize(size) {
     document.getElementById("alturaAtual").innerHTML = blockImageHeight;
 }
 
-function movePlayer (x, y) {
-    playerX += x;
-    playerY += y;
+// function movePlayer (x, y) {
+//     playerX += x;
+//     playerY += y;
 
-    playerUpdate();
-}
+    
+//     playerUpdate();
+// }
