@@ -65,7 +65,7 @@ function keyDown(e) {
         movePlayer(passo, 0);
     }
 
-    
+    if (keyPressed == s) {}
 }
 
 function changeSize(size) {
